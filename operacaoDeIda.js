@@ -84,7 +84,7 @@ async function enviarProspect(numero, nomeEncontrado, tentativas = 3) {
         const config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'https://plenafacefranchising.ipboxcloud.com.br:8607/ipbox/api/insertProspect',
+            url: 'https://seuambienteipbox/ipbox/api/insertProspect',
             headers: {
                 'Authorization': ipboxToken,
                 'Content-Type': 'application/x-www-form-urlencoded'
