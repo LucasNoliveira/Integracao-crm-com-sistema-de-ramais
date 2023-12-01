@@ -1,5 +1,5 @@
-const beeApi = 'https://api.beeceptor.com/api/v1/endpoints/vittagroup/requests?mode=full';
-const apiKey = 'e91c45cd55e0bf2df0a9a09cb6e963688b24cbc2lcO6vYMMSgcrK7V';
+const beeApi = 'https://api.beeceptor.com/api/v1/endpoints/seuendpoint/requests?mode=full';
+const apiKey = 'seutokendobeeceptor';
 
 // Crie uma variável vazia para armazenar os telefones formatados
 
@@ -44,14 +44,14 @@ async function conectarIpbox() {
         var axios = require('axios');
         var qs = require('qs');
         var data = qs.stringify({
-            'lote': 'Google meu negócio'
+            'lote': 'seulote'
         });
         var config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'https://plenafacefranchising.ipboxcloud.com.br:8607/ipbox/api/getProspectLote',
+            url: 'https://seuambienteipbox/ipbox/api/getProspectLote',
             headers: {
-                'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC92ZXJpeC5jb20uYnIiLCJhdWQiOiJodHRwOlwvXC9pcGJveC5jb20uYnIiLCJpYXQiOjE2OTk1NTE3NTIsIm5iZiI6MTY5OTU1MTc1NCwiZGF0YSI6eyJ1c3VhcmlvX2lkIjoiMSIsInRva2VuX2lkIjoiUmxyMUsyYnRXNUVsaHhrakQ2THcifX0.nwBsCiJuQc_kokGzBDWGvxtuCiIuHSXJb-_aMKeb4O8',
+                'Authorization': 'seutokenipbox',
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             data: data
@@ -101,14 +101,14 @@ async function conectarIpbox() {
                 var qs = require('qs');
                 var data = qs.stringify({
                     'prospectId': ids,
-                    'resultadoLigacaoId': '18',
+                    'resultadoLigacaoId': '18', // resultado para cliente, verificar documentação para classificar com outro resultado
                 });
                 var config = {
                     method: 'post',
                     maxBodyLength: Infinity,
-                    url: 'https://plenafacefranchising.ipboxcloud.com.br:8607/ipbox/api/classificarProspect',
+                    url: 'https://seuambienteipbox/ipbox/api/classificarProspect',
                     headers: {
-                        'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC92ZXJpeC5jb20uYnIiLCJhdWQiOiJodHRwOlwvXC9pcGJveC5jb20uYnIiLCJpYXQiOjE2OTk1NTE3NTIsIm5iZiI6MTY5OTU1MTc1NCwiZGF0YSI6eyJ1c3VhcmlvX2lkIjoiMSIsInRva2VuX2lkIjoiUmxyMUsyYnRXNUVsaHhrakQ2THcifX0.nwBsCiJuQc_kokGzBDWGvxtuCiIuHSXJb-_aMKeb4O8',
+                        'Authorization': 'tokenipbox',
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     data: data
