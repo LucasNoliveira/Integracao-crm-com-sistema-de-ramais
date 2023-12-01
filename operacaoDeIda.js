@@ -74,7 +74,7 @@ async function buscarNomeNoBeeceptor(numero) {
 async function enviarProspect(numero, nomeEncontrado, tentativas = 3) {
     try {
         const data = qs.stringify({
-            'lote': '4',
+            'lote': 'númerodolote',
             'nome': nomeEncontrado,
             'fonecel': numero,
             'foneres': '',
