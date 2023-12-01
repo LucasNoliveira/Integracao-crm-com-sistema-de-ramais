@@ -8,7 +8,7 @@ A ideia deste projeto era integrar a API do RD CRM Com a API do IPBoX, um sistem
 - Importação de Leads: Importa automaticamente leads do RD Station CRM para o IPBox, utilizando das automações do RD CRM com o Pluga Webhooks.
 - Extração de Dados: O Pluga Webhooks extrai os dados dos leads toda vez que uma negociação é movida de etapa e envia para o Beeceptor, para executar a etapa de mock e extrair as informações enviadas pelos Webhooks
 - Conexão da API do Beeceptor e importação de Dados no IPBoX: A partir desta etapa, iremos extrair os dados que chegaram ao Beeceptor por meio da API que será checada de 1 em 1 minuto aproximadamente
-- Tratamento de dados e remoção de duplicatas: Os dados são todos devidamente tratados antes de enviar para o Beeceptor. Eliminamos o código de país (+55), caracteres especiais, espaços e tratamos possíveis duplicatas
+- Tratamento de dados e remoção de duplicatas: Os dados são todos devidamente tratados antes de enviar para o Beeceptor. Eliminamos os possíveis código de país (+55), caracteres especiais, espaços e tratamos possíveis duplicatas
 - Envio para a API do IPBoX: Enviamos os dados recebidos para o IPBoX por meio da API
 - Classificação e remoção de leads que já são clientes: Dependendo do resultado da ligação, classificamos e removemos leads que já são clientes ao movimentar para determinada etapa no CRM.
 
@@ -24,3 +24,9 @@ A ideia deste projeto era integrar a API do RD CRM Com a API do IPBoX, um sistem
   <img height="30em" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
   <img height="30em" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
 </div>
+
+## Contribuição
+Sinta-se à vontade para contribuir para o desenvolvimento deste projeto.
+
+## Licença
+Este projeto está licenciado sob a Licença MIT.
