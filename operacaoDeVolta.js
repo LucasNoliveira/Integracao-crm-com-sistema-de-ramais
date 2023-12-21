@@ -1,5 +1,6 @@
-const beeApi = 'https://api.beeceptor.com/api/v1/endpoints/seuendpoint/requests?mode=full';
-const apiKey = 'seutokendobeeceptor';
+const beeApi = 'https://api.beeceptor.com/api/v1/endpoints/vittagroup/requests?mode=full';
+const apiKey = 'e91c45cd55e0bf2df0a9a09cb6e963688b24cbc2lcO6vYMMSgcrK7V';
+const tokenIpbox = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC92ZXJpeC5jb20uYnIiLCJhdWQiOiJodHRwOlwvXC9pcGJveC5jb20uYnIiLCJpYXQiOjE2OTk1NTE3NTIsIm5iZiI6MTY5OTU1MTc1NCwiZGF0YSI6eyJ1c3VhcmlvX2lkIjoiMSIsInRva2VuX2lkIjoiUmxyMUsyYnRXNUVsaHhrakQ2THcifX0.nwBsCiJuQc_kokGzBDWGvxtuCiIuHSXJb-_aMKeb4O8'
 
 // Crie uma variável vazia para armazenar os telefones formatados
 
@@ -22,7 +23,7 @@ async function conectarIpbox() {
         const contatos = respostaBee.data;
 
         for (contato of contatos) {
-            if (contato.method === 'POST' && contato.path == '/suc') {
+            if (contato.method === 'POST' && contato.path == '/success') {
                 const contatoObj = JSON.parse(contato.req.b);
                 let telefone = contatoObj.Telefone;
 
@@ -49,9 +50,9 @@ async function conectarIpbox() {
         var config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'https://seuambienteipbox/ipbox/api/getProspectLote',
+            url: 'https://plenafacefranchising.ipboxcloud.com.br:8607/ipbox/api/getProspectLote',
             headers: {
-                'Authorization': 'seutokenipbox',
+                'Authorization': tokenIpbox,
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             data: data
@@ -106,9 +107,9 @@ async function conectarIpbox() {
                 var config = {
                     method: 'post',
                     maxBodyLength: Infinity,
-                    url: 'https://seuambienteipbox/ipbox/api/classificarProspect',
+                    url: 'https://plenafacefranchising.ipboxcloud.com.br:8607/ipbox/api/classificarProspect',
                     headers: {
-                        'Authorization': 'tokenipbox',
+                        'Authorization': tokenIpbox,
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     data: data
